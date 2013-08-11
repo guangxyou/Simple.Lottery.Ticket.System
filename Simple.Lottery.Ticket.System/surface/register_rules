@@ -1,0 +1,20 @@
+    
+			****************************************************
+			*                                                  *
+			*    Main->User Register->Rules                    *
+			*                                                  *
+			*    1.Register name is your login name, name      *
+			*      cannot longer than 24  characters, is       *
+			*      the only Chinese characters or letters/     *
+			*      numbers/ underline combination;             *
+			*                                                  *
+			*    2.The user password length from 6 to 12,      *
+			*      password can be a combination of letters/   *
+			*      numbers / underline;                        *
+			*                                                  *
+			*    3.After successful registration, the system   *
+			*      will give 100 yuan of funds as a trial;     *
+			*                                                  *
+			*    4.Enter "quit" to return;                     *
+			*                                                  *
+			****************************************************

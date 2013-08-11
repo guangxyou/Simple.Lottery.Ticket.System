@@ -1,0 +1,126 @@
+				
+								彩票管理系统项目
+项目需求
+	详见docx文档			
+
+整体框架
+	详见pdf文档
+
+文件结构
+	1.两个子目录
+		a)数据文件(隐藏admin文件)
+		b)界面文件
+	2.源程序文件(6个C文件,7个头文件)
+		a)mainsys.c
+		b)user_list.c .h
+		c)lott_list.c .h
+		d)admin_operate.c .h
+		e)user_list.c .h
+		f)main_menu.c .h
+		g)common.h		
+		
+代码结构  接近2000行代码
+	1.两条单链表
+		a)用户链 user_list.c
+		b)彩票链 lott_list.c
+	2.两种用户
+		a)admin
+		b)users
+	3.一个C文件对应一个H文件
+		common.h通用函数,头文件都包含这个头文件
+	4. 5个结构体
+	
+typedef struct global	//全局变量
+{
+	int g_issue;		//期号
+	float g_jackpot;	//奖池余额
+}GLO;
+
+typedef struct user		//用户链表
+{
+	int uid;
+	char name[NAME_LEN];
+	char passwd[PASS_LEN];
+	float balance;
+	struct user *next;
+}USER, *pUser;		
+
+typedef struct lott		//彩票链表
+{
+	bool sweep_flag;		//0没有开奖，1已开奖
+	bool win_flag;			//0没有中奖，1中奖
+	char name[NAME_LEN];	//购买彩票用户的姓名
+	int issue;				//彩票期号
+	int uid;				//购买彩票用户的UID
+	int lott_num;			//彩票号码
+	int multiple;			//注数
+	int book_amount;		//购买彩票的金额=multiple*BASE1
+	
+	struct lott *next;
+}LOTT, *pLott;	
+
+typedef struct w_histoty	//历史中奖信息
+{
+	char name[NAME_LEN];
+	int issue;
+	int lott_num;
+	int uid;
+	int win_amount;
+}WINHIS;	
+
+typedef struct input		//登录时结构体
+{
+	char name[NAME_LEN];
+	char passwd[PASS_LEN];
+}INPUT;		
+
+
+函数:
+	1.开奖(两条链表,一个开奖函数完成一个链表的功能,将中奖信息全部写进文件,查询时直接读取文件)
+		void cash_award(int win_num, GLO *pglo, pUser puHead, pLott plHead);	//admin_operate.c
+	2.余额排序
+		void sort_balance(pUser puHead);	//admin_operate.c
+	3.模糊查找
+		void fuzzy_lookup(int magic_num, char *magic_str, bool search_flag, 
+		pUser puHead, pLott plHead);	//admin_operate.c
+	4.搜索显示函数(动态显示)
+		void searching(void);	//mainsys.c
+	5.查找UID返回结点指针(代码重用)
+		pUser getuP_byuid(pUser puHead, int uid, pUser pMod);	//admin_operate.c
+	6.重置所有信息
+		void sys_reset(void);	//mainsys.c
+	7.输入判断函数
+		void operate_choice(int *num);	//mainsys.c
+
+Bug:
+	保存每期开奖信息有时不正确;		
+	//admin_operate.c --> void	write_winner_file(pLott plHead, int win_num);
+		
+项目总结
+	1.自上而下的设计模式,搭建整体框架,不必要想太细,不要过早优化;
+	2.写代码想清楚再动手,code review之后再进行编译;
+	3.适度代码重构(代码复用度高),注意项目进度;
+	4.加深对一些知识的理解(List/IO/动态内存分配);
+	5.一个好的编辑器;
+	
+	6.单链表的结点数据域/指针域要独立,数据域作为一个单独的结构体嵌入到结点;
+	7.链表的插入操作视情况选择插入到尾部还是头结点之后,可以保留尾指针,一定要注意效率;
+	8.定义了一个指针pa,想在堆中为pa分配内存,无需将pa传入被调函数中,在被调函数中声明
+	  一个同类型的指针pb, malloc分配内存之后返回pb,用pa接收.
+	  错误1.传入pa再返回pb,pa的确指向了堆中分配的空间,但理解错误;
+	  原因:编译器为pa创建副本_pa(栈中),表面上对pa进行操作其实是对_pa的操作,而这些
+	  随着被调函数结束,_pa消亡,pa没有任何更改;关键是返回值pb在起作用.
+	  
+	  错误2.传入pa没有返回值,pa并没有指向分配的内存,后面调用pa可能会出错;
+	  原因:编译器为函数的每个参数创建副本,pa的副本为_pa,_pa和pa指向同样的地址,
+	  如果函数体修改_pa指向的地址中的内容,pa指向的内容自然会相应的作出修改,但如果
+	  在函数体内部为参数指针动态分配内存,结果只是_pa指向的地址发生了变化,而pa指向的地址
+	  中的内容没有发生变化,没有达到相应的目的.
+	
+	9.如果指针pa指向一块堆内存,如果要对指针pa进行下移(不是偏移)时,最好创建一个临时指针
+	  ptmp = pa;否则free时可能会出错;
+	10.入参检测（特别是指针）,另外函数的返回值也要检测,否则会有无法预知的错误;
+	11.函数封装,人机交互放到函数体外部,传入参数即可;
+	12.善于利用函数返回值;
+	
+By guangxyou 2013-8-8

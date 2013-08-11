@@ -1,0 +1,174 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADMIN_OPER_H	admin_operate.h	2;"	d
+BASE1	lottery_list.h	7;"	d
+COMMON_H	.tmp/common.h	2;"	d
+COMMON_H	common.h	2;"	d
+GLO	.tmp/common.h	/^}GLO;$/;"	t	typeref:struct:global
+GLO	common.h	/^}GLO;$/;"	t	typeref:struct:global
+INPUT	user_operate.h	/^}INPUT;$/;"	t	typeref:struct:input
+LOTT	lottery_list.h	/^}LOTT, *pLott;$/;"	t	typeref:struct:lott
+LOTT_LIST_H	lottery_list.h	2;"	d
+MAINSYS_H	mainsys.h	2;"	d
+MENU_H	main_menu.h	2;"	d
+NAME_LEN	.tmp/common.h	11;"	d
+NAME_LEN	common.h	11;"	d
+Node	.tmp/tmplist.c	/^}Node, *pNode;$/;"	t	typeref:struct:node	file:
+PASS_LEN	.tmp/common.h	12;"	d
+PASS_LEN	common.h	12;"	d
+PATHGLO	admin_operate.h	8;"	d
+PATH_LOTT	lottery_list.h	9;"	d
+PATH_USER	.tmp/user_list.h	8;"	d
+PATH_USER	user_list.h	8;"	d
+PERAWD	lottery_list.h	8;"	d
+START_FUNDS	.tmp/user_list.h	7;"	d
+START_FUNDS	user_list.h	7;"	d
+START_ISSUE	lottery_list.h	6;"	d
+START_UID	.tmp/user_list.h	6;"	d
+START_UID	user_list.h	6;"	d
+USER	.tmp/user_list.h	/^}USER, *pUser;$/;"	t	typeref:struct:user
+USER	user_list.h	/^}USER, *pUser;$/;"	t	typeref:struct:user
+USER_LIST_H	.tmp/user_list.h	2;"	d
+USER_LIST_H	user_list.h	2;"	d
+USER_OPER_H	user_operate.h	2;"	d
+WINHIS	admin_operate.h	/^}WINHIS;$/;"	t	typeref:struct:w_histoty
+admin_del_user	admin_operate.c	/^pUser admin_del_user(pUser puHead, int uid)$/;"	f
+admin_func	mainsys.c	/^void admin_func(INPUT *pu)$/;"	f
+admin_login_chk	admin_operate.c	/^bool admin_login_chk(INPUT *pa)$/;"	f
+admin_menu	main_menu.c	/^void admin_menu(void)$/;"	f
+admin_mod_uname	admin_operate.c	/^pUser admin_mod_uname(pUser puHead, int uid, pUser pMod)				\/\/管理员修改用户姓名$/;"	f
+admin_mod_upass	admin_operate.c	/^pUser admin_mod_upass(pUser puHead, int uid, pUser pMod)				\/\/管理员修改用户密码$/;"	f
+admin_view_info	admin_operate.c	/^void admin_view_info(pUser puHead)$/;"	f
+admin_view_menu	main_menu.c	/^void admin_view_menu(void)$/;"	f
+admin_view_trade	admin_operate.c	/^void admin_view_trade(pLott plHead)$/;"	f
+balance	.tmp/user_list.h	/^	float balance;$/;"	m	struct:user
+balance	user_list.h	/^	float balance;$/;"	m	struct:user
+before_print_info	mainsys.c	/^void before_print_info(void)$/;"	f
+before_print_trade	mainsys.c	/^void before_print_trade(int print_flag)	\/\/0 管理员打印模式 1用户打印模式$/;"	f
+book_amount	lottery_list.h	/^	int book_amount;		\/\/购买彩票的金额=multiple*BASE1$/;"	m	struct:lott
+book_lott	user_operate.c	/^bool book_lott(pLott plHead, pUser pCurr)$/;"	f
+buy_lott_menu	main_menu.c	/^void buy_lott_menu(void)$/;"	f
+cash_award	admin_operate.c	/^void cash_award(int win_num, GLO *pglo, pUser puHead, pLott plHead)		\/\/开奖，计算奖池金额，兑奖$/;"	f
+charge_user	admin_operate.c	/^int charge_user(pUser pCurr, int money)		\/\/管理员给用户充值\/兑奖$/;"	f
+clean_user_file	.tmp/user_list.c	/^void clean_user_file(char *path)			\/\/清空文件，测试用$/;"	f
+clean_user_file	user_list.c	/^void clean_user_file(char *path)			\/\/清空文件，测试用$/;"	f
+copy_list	.tmp/sort_list.c	/^pUser copy_list(pUser pdHead, pUser psHead)	$/;"	f
+creat_list	.tmp/tmplist.c	/^pNode creat_list()$/;"	f
+creat_void_lott_list	lottery_list.c	/^pLott creat_void_lott_list(pLott plHead)			\/\/创建一个只有头指针的空链表$/;"	f
+creat_void_user_list	.tmp/user_list.c	/^pUser creat_void_user_list(pUser puHead)	\/\/创建一个只有头指针的空链表$/;"	f
+creat_void_user_list	user_list.c	/^pUser creat_void_user_list(pUser puHead)	\/\/创建一个只有头指针的空链表$/;"	f
+data	.tmp/tmplist.c	/^	int data;$/;"	m	struct:node	file:
+divise_line	mainsys.c	/^void divise_line(void)$/;"	f
+fgets_check	user_operate.c	/^char *fgets_check(char *str, int size)$/;"	f
+free_lott_list	lottery_list.c	/^void free_lott_list(pLott plHead)$/;"	f
+free_user_list	.tmp/user_list.c	/^void free_user_list(pUser puHead)$/;"	f
+free_user_list	user_list.c	/^void free_user_list(pUser puHead)$/;"	f
+fuzzy_lookup	admin_operate.c	/^void fuzzy_lookup(int magic_num, pUser puHead, pLott plHead)$/;"	f
+g_issue	.tmp/common.h	/^	int g_issue;		\/\/期号$/;"	m	struct:global
+g_issue	common.h	/^	int g_issue;		\/\/期号$/;"	m	struct:global
+g_jackpot	.tmp/common.h	/^	int g_jackpot;		\/\/奖池余额$/;"	m	struct:global
+g_jackpot	common.h	/^	float g_jackpot;		\/\/奖池余额$/;"	m	struct:global
+gene_ram_num	admin_operate.c	/^int gene_ram_num(void)			\/\/产生随机中奖号码$/;"	f
+get_book_input	user_operate.c	/^pLott get_book_input(pLott pbl)			\/\/pointer book lottery$/;"	f
+getinput	user_operate.c	/^INPUT *getinput(INPUT *pu)				\/\/登录或者注册时输入的信息$/;"	f
+getlP_byissue	admin_operate.c	/^pLott getlP_byissue(pLott pStart, int issue)	\/\/查找包含特定issue的结点并返回结点指针$/;"	f
+getlP_byuid	user_operate.c	/^pLott getlP_byuid(pLott pStart, int uid)		\/\/查找包含特定UID的结点$/;"	f
+getuP_byuid	admin_operate.c	/^pUser getuP_byuid(pUser puHead, int uid, pUser pMod)$/;"	f
+glo	mainsys.c	/^GLO glo;					\/\/全局变量,包含彩票期号和奖池金额$/;"	v
+global	.tmp/common.h	/^typedef struct global$/;"	s
+global	common.h	/^typedef struct global$/;"	s
+hide_cursor	mainsys.c	/^void hide_cursor(void)		\/\/隐藏光标$/;"	f
+input	user_operate.h	/^typedef struct input			\/\/临时保存登录时输入的name\/passwd$/;"	s
+insert_lott_tail	lottery_list.c	/^void insert_lott_tail(pLott plHead, int issue, int uid, char *name, int lott_num, int multiple, bool sweep_flag, bool win_flag)		$/;"	f
+insert_user_tail	.tmp/user_list.c	/^void insert_user_tail(pUser puHead, char *name, char *passwd)			\/\/链表尾部插入$/;"	f
+insert_user_tail	user_list.c	/^void insert_user_tail(pUser puHead, char *name, char *passwd, int balance)		\/\/链表尾部插入$/;"	f
+is_ll_empty	lottery_list.c	/^bool is_ll_empty(pLott plHead)$/;"	f
+is_ul_empty	.tmp/user_list.c	/^bool is_ul_empty(pUser puHead)$/;"	f
+is_ul_empty	user_list.c	/^bool is_ul_empty(pUser puHead)$/;"	f
+issue	admin_operate.h	/^	int issue;$/;"	m	struct:w_histoty
+issue	lottery_list.h	/^	int issue;				\/\/彩票期号$/;"	m	struct:lott
+length	.tmp/sort_list.c	/^int length(pUser psHead)		\/\/个数不包含头指针$/;"	f
+load_user_info	.tmp/user_list.c	/^void load_user_info(pUser puHead)$/;"	f
+load_user_info	user_list.c	/^void load_user_info(pUser puHead)$/;"	f
+load_user_trade	lottery_list.c	/^void load_user_trade(pLott plHead)$/;"	f
+lott	lottery_list.h	/^typedef struct lott$/;"	s
+lott_num	admin_operate.h	/^	int lott_num;$/;"	m	struct:w_histoty
+lott_num	lottery_list.h	/^	int lott_num;			\/\/彩票号码$/;"	m	struct:lott
+main	.tmp/sort_list.c	/^int main()$/;"	f
+main	.tmp/tmp.c	/^int main()$/;"	f
+main	.tmp/tmplist.c	/^int main()$/;"	f
+main	mainsys.c	/^int main(int argc, char *argv[])$/;"	f
+main_menu	mainsys.c	/^void main_menu()$/;"	f
+mod_admin_pw	admin_operate.c	/^void mod_admin_pw(void)				\/\/隐藏功能,当输入uid=1000时修改管理员密码$/;"	f
+mod_choice	mainsys.c	/^void mod_choice(void)$/;"	f
+modify_user_name	user_operate.c	/^void modify_user_name(pUser pCurr)$/;"	f
+modify_user_passwd	user_operate.c	/^void modify_user_passwd(pUser pCurr)$/;"	f
+multiple	lottery_list.h	/^	int multiple;			\/\/注数$/;"	m	struct:lott
+name	.tmp/user_list.h	/^	char name[NAME_LEN];$/;"	m	struct:user
+name	admin_operate.h	/^	char name[NAME_LEN];$/;"	m	struct:w_histoty
+name	lottery_list.h	/^	char name[NAME_LEN];	\/\/购买彩票用户的姓名$/;"	m	struct:lott
+name	user_list.h	/^	char name[NAME_LEN];$/;"	m	struct:user
+name	user_operate.h	/^	char name[NAME_LEN];$/;"	m	struct:input
+next	.tmp/tmplist.c	/^	struct node *next;$/;"	m	struct:node	typeref:struct:node::node	file:
+next	.tmp/user_list.h	/^	struct user *next;$/;"	m	struct:user	typeref:struct:user::user
+next	lottery_list.h	/^	struct lott *next;$/;"	m	struct:lott	typeref:struct:lott::lott
+next	user_list.h	/^	struct user *next;$/;"	m	struct:user	typeref:struct:user::user
+node	.tmp/tmplist.c	/^typedef struct node$/;"	s	file:
+operate_choice	mainsys.c	/^void operate_choice(int *num)$/;"	f
+pLott	lottery_list.h	/^}LOTT, *pLott;$/;"	t	typeref:struct:lott
+pNode	.tmp/tmplist.c	/^}Node, *pNode;$/;"	t	typeref:struct:node	file:
+pUser	.tmp/user_list.h	/^}USER, *pUser;$/;"	t	typeref:struct:user
+pUser	user_list.h	/^}USER, *pUser;$/;"	t	typeref:struct:user
+passwd	.tmp/user_list.h	/^	char passwd[PASS_LEN];$/;"	m	struct:user
+passwd	user_list.h	/^	char passwd[PASS_LEN];$/;"	m	struct:user
+passwd	user_operate.h	/^	char passwd[PASS_LEN];$/;"	m	struct:input
+pglo	mainsys.c	/^GLO *pglo = &glo;			\/\/pglo point to global struct$/;"	v
+plHead	mainsys.c	/^pLott plHead = NULL;		\/\/彩票链表头指针$/;"	v
+press_any_key	mainsys.c	/^void press_any_key(void)$/;"	f
+print_user_info	.tmp/user_list.c	/^void print_user_info(pUser p)$/;"	f
+print_user_info	user_list.c	/^void print_user_info(pUser p)$/;"	f
+print_user_trade	lottery_list.c	/^void print_user_trade(pLott p)$/;"	f
+print_winner_his	admin_operate.c	/^void print_winner_his(WINHIS *his)$/;"	f
+puHead	mainsys.c	/^pUser puHead = NULL;		\/\/彩民链表头指针$/;"	v
+read_glo_file	admin_operate.c	/^void read_glo_file(GLO *pglo)			\/\/读全局变量文件，程序运行开始后运行$/;"	f
+read_winner_file	admin_operate.c	/^void read_winner_file(void)			\/\/读取中奖者文件并输出$/;"	f
+save_user_info	.tmp/user_list.c	/^void save_user_info(pUser puHead)$/;"	f
+save_user_info	user_list.c	/^void save_user_info(pUser puHead)$/;"	f
+save_user_trade	lottery_list.c	/^void save_user_trade(pLott plHead)$/;"	f
+search_lott_list	admin_operate.c	/^pLott search_lott_list(int magic_num, pLott plres)$/;"	f
+search_user_list	admin_operate.c	/^pUser search_user_list(int magic_num, pUser puHead)			\/\/模糊查找$/;"	f
+searching	.tmp/tmp.c	/^void searching(void)$/;"	f
+searching	mainsys.c	/^void searching(void)		\/\/动态显示searching字符$/;"	f
+show_cursor	mainsys.c	/^void show_cursor(void)		\/\/显示光标$/;"	f
+sort_balance	admin_operate.c	/^void sort_balance(pUser puHead)	\/\/根据余额进行降序排序	$/;"	f
+sweep_flag	lottery_list.h	/^	bool sweep_flag;		\/\/0没有开奖，1已开奖$/;"	m	struct:lott
+sys_main_menu	main_menu.c	/^void sys_main_menu(void)$/;"	f
+sys_reset	mainsys.c	/^void sys_reset(void)$/;"	f
+travers_lott_list	lottery_list.c	/^void travers_lott_list(pLott plHead)$/;"	f
+travers_user_list	.tmp/user_list.c	/^void travers_user_list(pUser puHead)			\/\/遍历链表$/;"	f
+travers_user_list	user_list.c	/^void travers_user_list(pUser puHead)			\/\/遍历链表$/;"	f
+traverse	.tmp/sort_list.c	/^void traverse(pUser pHead)$/;"	f
+traverse_list	.tmp/tmplist.c	/^void traverse_list(pNode pHead)$/;"	f
+uid	.tmp/user_list.h	/^	int uid;$/;"	m	struct:user
+uid	admin_operate.h	/^	int uid;$/;"	m	struct:w_histoty
+uid	lottery_list.h	/^	int uid;				\/\/购买彩票用户的UID$/;"	m	struct:lott
+uid	user_list.h	/^	int uid;$/;"	m	struct:user
+user	.tmp/user_list.h	/^typedef struct user$/;"	s
+user	user_list.h	/^typedef struct user$/;"	s
+user_func	mainsys.c	/^void user_func(INPUT *pu, pUser pCurr, char flag)$/;"	f
+user_login_chk	user_operate.c	/^pUser user_login_chk(pUser puHead, INPUT *pu)$/;"	f
+user_menu	main_menu.c	/^void user_menu(void)$/;"	f
+user_register	user_operate.c	/^INPUT *user_register(pUser puHead, INPUT *pu)$/;"	f
+user_register_menu	main_menu.c	/^void user_register_menu(void)$/;"	f
+user_view_info	user_operate.c	/^void user_view_info(pUser pCurr)$/;"	f
+user_view_trade	user_operate.c	/^void user_view_trade(pLott plHead, int uid)		\/\/输出特定UID购买的彩票历史信息$/;"	f
+w_histoty	admin_operate.h	/^typedef struct w_histoty$/;"	s
+win_amount	admin_operate.h	/^	int win_amount;$/;"	m	struct:w_histoty
+win_flag	lottery_list.h	/^	bool win_flag;			\/\/0没有中奖，1中奖$/;"	m	struct:lott
+write_admfile	admin_operate.c	/^void write_admfile(char *admin_passwd)$/;"	f
+write_glo_file	admin_operate.c	/^void write_glo_file(GLO *pglo)			\/\/写全局变量文件，每当开奖后写一次$/;"	f
+write_winner_file	admin_operate.c	/^void write_winner_file(pLott plHead)			\/\/写全局变量文件，每当开奖后写一次$/;"	f
